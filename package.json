@@ -1,0 +1,29 @@
+{
+  "name": "progressive-insights-web",
+  "version": "1.0.0",
+  "description": "website for progressive insights",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "progressive-insights"
+  },
+  "keywords": [
+    "web",
+    "app",
+    "node",
+    "social",
+    "data",
+    "science",
+    "non-porfit"
+  ],
+  "author": "Madhura Rajopadhye",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0",
+    "marko": "^3.7.4",
+    "marko-widgets": "^6.1.3"
+  }
+}
