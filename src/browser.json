@@ -1,0 +1,11 @@
+{
+  "dependencies": [
+    "require: marko-widgets",
+    "./ui-modules/app-main-content/browser.json",
+    "./ui-modules/app-header/browser.json",
+    "./ui-modules/info-section/browser.json",
+    "./ui-modules/contact-form/browser.json",
+    "./ui-modules/contact-info/browser.json",
+    "./ui-modules/person-profile/browser.json"
+  ]
+}

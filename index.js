@@ -2,20 +2,44 @@ var express = require('express');
 var app = express();
 var marko = require('marko');
 require('marko/node-require').install();
-var template = require('./src/templates/home/template.marko');
+var homeTemplate = require('./src/templates/home/template.marko');
+var pageTemplate = require('./src/templates/page/template.marko');
+var leadrTemplate = require('./src/templates/page/template.marko');
+var contTemplate = require('./src/templates/contact/template.marko');
+
+var getData = require('./src/web-data');
 
 app.get('/', function(req, res) {
-    // Render directly to the writable HTTP output stream:
-    template.render({
-            name: 'Frank'
-        }, res);
+    homeTemplate.render({}, res);
 });
 
-  var server = app.listen(8081, function () {
+app.get('/philosophy', function(req, res) {
+    pageTemplate.render(getData('philosophy'), res);
+})
 
+app.get('/organization', function(req, res) {
+    pageTemplate.render(getData('organization'), res);
+})
+
+app.get('/social-impact-lab', function(req, res) {
+    pageTemplate.render(getData('social-impact-lab'), res);
+})
+
+app.get('/leadership', function(req, res) {
+    pageTemplate.render(getData('leadership'), res);
+})
+
+app.get('/donations', function(req, res) {
+    pageTemplate.render(getData('donations'), res);
+})
+
+app.get('/contact', function(req, res) {
+    pageTemplate.render(getData('contact'), res);
+})
+
+  var server = app.listen(8081, function () {
   var host = server.address().address
   var port = server.address().port
-
   console.log("Example app listening at http://%s:%s", host, port)
 
 });

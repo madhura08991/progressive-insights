@@ -23,7 +23,11 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.14.0",
+    "lasso": "^2.5.5",
+    "lasso-marko": "^2.0.7",
+    "less": "^2.7.1",
     "marko": "^3.7.4",
+    "marko-layout": "^2.0.2",
     "marko-widgets": "^6.1.3"
   }
 }

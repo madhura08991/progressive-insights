@@ -1,0 +1,17 @@
+.main-img {
+  position: relative;
+  width: 100%;
+}
+
+h2 {
+  position: absolute;
+  bottom: 200px;
+  left: 10px;
+  width: 100%;
+
+  span {
+    color: white;
+    font: bold 28px Helvetica, Sans-Serif;
+    padding: 10px;
+  }
+}
