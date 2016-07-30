@@ -1,0 +1,13 @@
+<div class="form">
+  <form action="POST">
+    <for(field in ${data.form-fields}) >
+      <if($field.field-type=='input')>
+        <input type=$field.input-type placeholder=$field.text class=$field.length>
+        <input>
+      </if>
+      <if($field.field-type=='button')>
+        <button> $field.text </button>
+      </if>
+    </for>
+  </form>
+</form>

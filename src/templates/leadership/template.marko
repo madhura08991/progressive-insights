@@ -1,0 +1,17 @@
+<lasso-page
+  name="${data.name}"
+  package-path="${data.browser}"
+/>
+
+<head>
+    <include("../../ui-modules/app-header/template.marko", {}) />
+</head>
+<body>
+    <include("../../ui-modules/app-main-banner/template.marko", mainTitle= "${data.mainTitle}") />
+    <div class="leadership-list">
+      <for(leader in "${data.leaders}")
+        <include("../../ui-modules/person-profile/template.marko", person= leader) />
+      </for>
+    </div>
+    <include("../../ui-modules/app-footer/template.marko", {}) />
+</body>

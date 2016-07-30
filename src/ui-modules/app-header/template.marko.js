@@ -5,7 +5,7 @@ function create(__helpers) {
       escapeXml = __helpers.x;
 
   return function render(data, out) {
-    out.w("<h2> Hello, World! </h2>");
+    out.w("<div class=\"nav-bar\"> <ul> <li>Our Philosophy </li> <li> Organization </li> <li> Social Impact Lab </li> <li> Leadership </li> <li> Donations </li> <li> Contact Us </li> </ul> </div>");
   };
 }
 
