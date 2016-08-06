@@ -10,7 +10,7 @@
     <include("../../ui-modules/app-main-banner/template.marko", mainTitle= "$data.mainTitle") />
     <div class="row">
       <div class="col">
-        <include("../../ui-modules/contact-form/template.marko", form-fields="$data.contents[0].fields" ) />
+        <include("../../ui-modules/contact-form/template.marko", formFields="$data.contents[0].fields" ) />
       </div>
       <div class="col">
         <include("../../ui-modules/contact-info/template", contact="$data.contents[1].methods[0]") />
