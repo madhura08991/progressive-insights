@@ -14,9 +14,9 @@ function create(__helpers) {
         filename: __filename
       }, out);
 
-    out.w("<head> <app-header></app-header> </head> <body> <h2> \"" +
+    out.w("<head> <app-header></app-header> </head> <body> <h2> " +
       escapeXml(data.mainTitle) +
-      "\" </h2> <app-footer></app-footer> </body>");
+      " </h2> <app-footer></app-footer> </body>");
   };
 }
 

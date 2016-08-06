@@ -4,11 +4,10 @@
 />
 
 <head>
-    <app-header />
+    <include("../../ui-modules/app-header/template.marko", {}) />
 </head>
 <body>
-    <h2>
-    ${data.mainTitle}
-    </h2>
-    <app-footer />
+    <include("../../ui-modules/app-main-content/template.marko", mainTitle= "${data.mainTitle}") />
+    <include("../../ui-modules/app-info-section/template.marko", contents="${data.contents}") />
+    <include("../../ui-modules/app-footer/template.marko", {}) />
 </body>

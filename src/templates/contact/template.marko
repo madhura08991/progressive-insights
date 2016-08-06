@@ -1,0 +1,23 @@
+<lasso-page
+  name="${data.name}"
+  package-path="${data.browser}"
+/>
+
+<head>
+    <include("../../ui-modules/app-header/template.marko", {}) />
+</head>
+<body>
+    <include("../../ui-modules/app-main-banner/template.marko", mainTitle= "${data.mainTitle}") />
+    <div class="row">
+      <div class="col">
+        <include("../../ui-modules/contact-form/template.marko", form-fields="${data.contents[0].fields}" }) />
+      </div>
+      <div class="col">
+        <include("../../ui-modules/contact-info/template", contact="${data.contents[1].methods[0]}") />
+      </div>
+      <div class="row">
+        <include("../../ui-modules/contact-info/template",contact="${data.contents[1].methods[1]}") />
+      </div>
+    </div>
+    <include("../../ui-modules/app-footer/template.marko", {}) />
+</body>

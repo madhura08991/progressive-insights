@@ -2,12 +2,14 @@ var express = require('express');
 var app = express();
 var marko = require('marko');
 require('marko/node-require').install();
-var homeTemplate = require('./src/templates/home/template.marko');
-var pageTemplate = require('./src/templates/page/template.marko');
-var leadrTemplate = require('./src/templates/page/template.marko');
-var contTemplate = require('./src/templates/contact/template.marko');
+var homeTemplate = require('marko').load(require.resolve('./src/templates/home/template.marko'));
+var pageTemplate = require('marko').load(require.resolve('./src/templates/page/template.marko'));
+var leadrTemplate = require('marko').load(require.resolve('./src/templates/page/template.marko'));
+var contTemplate = require('marko').load(require.resolve('./src/templates/contact/template.marko'));
 
 var getData = require('./src/web-data');
+
+require('marko/node-require').install();
 
 app.get('/', function(req, res) {
     homeTemplate.render({}, res);
