@@ -7,6 +7,8 @@ function create(__helpers) {
       lasso_page = __loadTag(require("lasso/taglib/page-tag")),
       loadTemplate = __helpers.l,
       app_header_template = loadTemplate(require.resolve("../../ui-modules/app-header/template.marko")),
+      app_main_banner_template = loadTemplate(require.resolve("../../ui-modules/app-main-banner/template.marko")),
+      app_info_section_template = loadTemplate(require.resolve("../../ui-modules/app-info-section/template.marko")),
       app_footer_template = loadTemplate(require.resolve("../../ui-modules/app-footer/template.marko"));
 
   return function render(data, out) {
@@ -17,26 +19,23 @@ function create(__helpers) {
         filename: __filename
       }, out);
 
-<<<<<<< HEAD
-    out.w("<head> <app-header></app-header> </head> <body> <h2> " +
-      escapeXml(data.mainTitle) +
-      " </h2> <app-footer></app-footer> </body>");
-=======
-    var name = "appHeaderTemplate",
-        value = "src/ui-modules/app-header/template.marko";
-
     out.w("<head> ");
 
     app_header_template.render({}, out);
 
-    out.w(" </head> <body> <h2> " +
-      escapeXml(data.mainTitle) +
-      " </h2> ");
+    out.w(" </head> <body> ");
+
+    app_main_banner_template.render(mainTitle = data.mainTitle, out);
+
+    out.w(" ");
+
+    app_info_section_template.render(contents = data.contents, out);
+
+    out.w(" ");
 
     app_footer_template.render({}, out);
 
     out.w(" </body>");
->>>>>>> 3396825816240ad65710b98d07b6bdec7fb1d99e
   };
 }
 

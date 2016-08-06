@@ -1,6 +1,6 @@
 <div class="form">
   <form action="POST">
-    <for(field in ${data.formFields}) >
+    <for(field in $data.formFields) >
       <if($field.field-type=='input')>
         <input type=$field.input-type placeholder=$field.text class=$field.length>
         <input>

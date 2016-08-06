@@ -1,22 +1,21 @@
 <div class="info-section-container">
-
-  <for(content in "${data}")>
-    <if ("content.type"=='large-heading')>
-      <include("../ui-helpers/largeHeading.marko", heading=content.text) />
+  <for (content in "$data.contents")>
+    <if (content.type=='large-heading')>
+      <include("../ui-helpers/largeHeading.marko", heading = content.text) />
     </if>
-    <if ("content.type" == 'para)>
+    <if (content.type == 'para')>
       <include("../ui-helpers/para.marko", paraText = content.text) />
     </if>
-    <if ("content.type" == 'bold-para')>
+    <if (content.type == 'bold-para')>
       <include("../ui-helpers/boldPara.marko", paraText = content.text) />
     </if>
-    <if ("content.type" == 'bulleted-list')>
+    <if (content.type == 'bulleted-list')>
       <include("../ui-helpers/bulletedList.marko", list = content.text) />
     </if>
-    <if ("content.type" == 'img')>
+    <if (content.type == 'img')>
       <include("../ui-helpers/image.marko", imgSrc = content.src) />
     </if>
-    <if ("content.type" == 'paypal-button')>
+    <if (content.type == 'paypal-button')>
       <include("../ui-helpers/paypalButton.marko", buttonText = content.text) />
     </if>
   </for>
