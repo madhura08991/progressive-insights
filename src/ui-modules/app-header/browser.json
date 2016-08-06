@@ -1,5 +1,9 @@
 {
   "dependencies": [
+<<<<<<< HEAD
     "./lib/style.css"
+=======
+      "./lib/style.css"
+>>>>>>> 3396825816240ad65710b98d07b6bdec7fb1d99e
   ]
 }

@@ -11,6 +11,7 @@ function create(__helpers) {
       app_footer_template = loadTemplate(require.resolve("../../ui-modules/app-footer/template.marko"));
 
   return function render(data, out) {
+<<<<<<< HEAD:src/templates/home/template.marko.js
     lasso_page({
         name: data.name,
         packagePath: data.browser,
@@ -29,6 +30,9 @@ function create(__helpers) {
     app_footer_template.render({}, out);
 
     out.w("</body>");
+=======
+    out.w("<h3> App footer </h3>");
+>>>>>>> 3396825816240ad65710b98d07b6bdec7fb1d99e:src/ui-modules/app-footer/template.marko.js
   };
 }
 
