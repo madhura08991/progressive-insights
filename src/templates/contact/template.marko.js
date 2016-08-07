@@ -26,19 +26,19 @@ function create(__helpers) {
 
     out.w(" </head> <body> ");
 
-    app_main_banner_template.render(mainTitle = "$data.mainTitle", out);
+    app_main_banner_template.render(mainTitle = data.mainTitle, out);
 
     out.w(" <div class=\"row\"> <div class=\"col\"> ");
 
-    contact_form_template.render(formFields = "$data.contents[0].fields", out);
+    contact_form_template.render(formFields = data.contents[0].fields, out);
 
     out.w(" </div> <div class=\"col\"> ");
 
-    contact_info_template.render(contact = "$data.contents[1].methods[0]", out);
+    contact_info_template.render(contact = data.contents[1].methods[0], out);
 
     out.w(" </div> <div class=\"row\"> ");
 
-    contact_info_template.render(contact = "$data.contents[1].methods[1]", out);
+    contact_info_template.render(contact = data.contents[1].methods[1], out);
 
     out.w(" </div> </div> ");
 

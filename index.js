@@ -4,7 +4,7 @@ var marko = require('marko');
 require('marko/node-require').install();
 var homeTemplate = require('marko').load(require.resolve('./src/templates/home/template.marko'));
 var pageTemplate = require('marko').load(require.resolve('./src/templates/page/template.marko'));
-var leadrTemplate = require('marko').load(require.resolve('./src/templates/page/template.marko'));
+var leadrTemplate = require('marko').load(require.resolve('./src/templates/leadership/template.marko'));
 var contTemplate = require('marko').load(require.resolve('./src/templates/contact/template.marko'));
 
 var getData = require('./src/web-data');
@@ -28,7 +28,7 @@ app.get('/social-impact-lab', function(req, res) {
 })
 
 app.get('/leadership', function(req, res) {
-    pageTemplate.render(getData('leadership'), res);
+    leadrTemplate.render(getData('leadership'), res);
 })
 
 app.get('/donations', function(req, res) {
@@ -36,7 +36,7 @@ app.get('/donations', function(req, res) {
 })
 
 app.get('/contact', function(req, res) {
-    pageTemplate.render(getData('contact'), res);
+    contTemplate.render(getData('contact'), res);
 })
 
   var server = app.listen(8081, function () {

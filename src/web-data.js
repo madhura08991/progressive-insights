@@ -87,36 +87,36 @@ module.exports = function(request) {
      {
        "type": "bold-para",
        "text": {
-         "bold-text": "Rural Development",
-         "regular-text": "Agricultural development, Water management, rural good governance"
+         "boldText": "Rural Development",
+         "regularText": "Agricultural development, Water management, rural good governance"
        }
      },
      {
        "type": "bold-para",
        "text": {
-         "bold-text": "Education",
-         "regular-text": "Improve Quality of education, Education Inequality"
+         "boldText": "Education",
+         "regularText": "Improve Quality of education, Education Inequality"
        }
      },
      {
        "type": "bold-para",
        "text": {
-         "bold-text": "Poverty",
-         "regular-text": "Food security, Economic inequality"
+         "boldText": "Poverty",
+         "regularText": "Food security, Economic inequality"
        }
      },
      {
        "type": "bold-para",
        "text": {
-         "bold-text": "Environment",
-         "regular-text": "Environmental health, Pollution"
+         "boldText": "Environment",
+         "regularText": "Environmental health, Pollution"
        }
      },
      {
        "type": "bold-para",
        "text": {
-         "bold-text": "Public Health",
-         "regular-text": "Health Disparities, Over Population, HIV/AIDS"
+         "boldText": "Public Health",
+         "regularText": "Health Disparities, Over Population, HIV/AIDS"
        }
      }
    ]
@@ -143,7 +143,7 @@ module.exports = function(request) {
  }
  if(request=='leadership') {
    return {
-     "browser": "../../browser..json",
+     "browser": "../../browser.json",
      "name": "Progressive Insights - Leadership",
      "mainTitle": "Our Leadership Team",
      "leaders": [
@@ -211,28 +211,28 @@ module.exports = function(request) {
        "type": "form",
        "fields": [
          {
-           "field-type": "input",
+           "fieldType": "input",
            "text": "Name",
-           "field-length": "regular",
-           "input-type": "text"
+           "fieldLength": "regular",
+           "inputType": "text"
          },
          {
-           "field-type": "input",
+           "fieldType": "input",
            "text": "Email",
-           "field-length": "regular",
-           "input-type": "email"
+           "fieldLength": "regular",
+           "inputType": "email"
          },
          {
-           "field-type": "input",
+           "fieldType": "input",
            "text": "Subject",
-           "field-length": "regular",
-           "input-type": "text"
+           "fieldLength": "regular",
+           "inputType": "text"
          },
          {
-           "type": "input",
+           "fieldType": "input",
            "text": "Message",
-           "field-length": "large",
-           "input-type": "text"
+           "fieldLength": "large",
+           "inputType": "text"
          },
          {
            "type": "button",

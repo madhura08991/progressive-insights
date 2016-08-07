@@ -1,12 +1,11 @@
 <div class="form">
   <form action="POST">
-    <for(field in $data.formFields) >
-      <if($field.field-type=='input')>
-        <input type=$field.input-type placeholder=$field.text class=$field.length>
-        <input>
+    <for(field in "${formFields}") >
+      <if( "${field.fieldType}" =='input')>
+        <input type="${field.inputType}" placeholder="${field.text}" class="${field.fieldLength}" />
       </if>
-      <if($field.field-type=='button')>
-        <button> $field.text </button>
+      <if( "${field.fieldType}" =='button')>
+        <button> ${field.text} </button>
       </if>
     </for>
   </form>
