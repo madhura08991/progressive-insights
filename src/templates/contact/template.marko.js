@@ -24,15 +24,15 @@ function create(__helpers) {
 
     app_header_template.render({}, out);
 
-    out.w(" </head> <body> ");
+    out.w(" </head> <body> <div class=\"container\"> ");
 
     app_main_banner_template.render(mainTitle = data.mainTitle, out);
 
-    out.w(" <div class=\"row\"> <div class=\"col\"> ");
+    out.w(" <div class=\"row\"> <div class=\"six columns\"> ");
 
     contact_form_template.render(formFields = data.contents[0].fields, out);
 
-    out.w(" </div> <div class=\"col\"> ");
+    out.w(" </div> <div class=\"six columns\"> ");
 
     contact_info_template.render(contact = data.contents[1].methods[0], out);
 
@@ -40,7 +40,7 @@ function create(__helpers) {
 
     contact_info_template.render(contact = data.contents[1].methods[1], out);
 
-    out.w(" </div> </div> ");
+    out.w(" </div> </div> </div> ");
 
     app_footer_template.render({}, out);
 

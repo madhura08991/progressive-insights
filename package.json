@@ -29,6 +29,7 @@
     "less": "^2.7.1",
     "marko": "^3.7.4",
     "marko-layout": "^2.0.2",
-    "marko-widgets": "^6.1.3"
+    "marko-widgets": "^6.1.3",
+    "skeleton-css": "^2.0.4"
   }
 }

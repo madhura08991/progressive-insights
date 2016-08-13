@@ -6,6 +6,8 @@
     "./ui-modules/app-info-section/browser.json",
     "./ui-modules/contact-form/browser.json",
     "./ui-modules/contact-info/browser.json",
-    "./ui-modules/person-profile/browser.json"
+    "./ui-modules/person-profile/browser.json",
+    "./lib/globalStyle.css",
+    "./lib/Skeleton-2.0.4/css/skeleton.css"
   ]
 }

@@ -7,17 +7,19 @@
     <include("../../ui-modules/app-header/template.marko", {}) />
 </head>
 <body>
+  <div class="container">
     <include("../../ui-modules/app-main-banner/template.marko", mainTitle= "${data.mainTitle}") />
     <div class="row">
-      <div class="col">
+      <div class="six columns">
         <include("../../ui-modules/contact-form/template.marko", formFields="${data.contents[0].fields}" ) />
       </div>
-      <div class="col">
+      <div class="six columns">
         <include("../../ui-modules/contact-info/template", contact="${data.contents[1].methods[0]}") />
       </div>
       <div class="row">
         <include("../../ui-modules/contact-info/template", contact="${data.contents[1].methods[1]}") />
       </div>
     </div>
+  </div>
     <include("../../ui-modules/app-footer/template.marko", {}) />
 </body>

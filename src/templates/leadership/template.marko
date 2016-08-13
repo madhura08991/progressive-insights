@@ -7,11 +7,21 @@
     <include("../../ui-modules/app-header/template.marko", {}) />
 </head>
 <body>
+  <div class="container">
     <include("../../ui-modules/app-main-banner/template.marko", mainTitle= "${data.mainTitle}") />
+  </div>
+  <div class="container">
     <div class="leadership-list">
-        <for (leader in "${data.leaders}")>
-        <include("../../ui-modules/person-profile/template.marko", person= "${leader}") />
-      </for>
+      <div class="row">
+        <div class="seven columns">
+          <for (leader in "${data.leaders}")>
+            <include("../../ui-modules/person-profile/template.marko", person= "${leader}") />
+          </for>
+        </div>
+        <div class="five columns">
+        </div>
+      </div>
     </div>
+  </div>
     <include("../../ui-modules/app-footer/template.marko", {}) />
 </body>
