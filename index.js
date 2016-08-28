@@ -6,7 +6,7 @@ var homeTemplate = require('marko').load(require.resolve('./src/templates/home/t
 var pageTemplate = require('marko').load(require.resolve('./src/templates/page/template.marko'));
 var leadrTemplate = require('marko').load(require.resolve('./src/templates/leadership/template.marko'));
 var contTemplate = require('marko').load(require.resolve('./src/templates/contact/template.marko'));
-
+var submitInfo = require('./helper.js');
 var getData = require('./src/web-data');
 
 require('marko/node-require').install();
@@ -31,12 +31,15 @@ app.get('/leadership', function(req, res) {
     leadrTemplate.render(getData('leadership'), res);
 })
 
-app.get('/donations', function(req, res) {
-    pageTemplate.render(getData('donations'), res);
-})
-
 app.get('/contact', function(req, res) {
     contTemplate.render(getData('contact'), res);
+})
+
+app.get('/submit', function(req, res) {
+  submitInfo(req);
+  var data = getData('contact');
+  data.contents[0].fields[0].messageSent = true;
+  contTemplate.render(data, res);
 })
 
   var server = app.listen(8081, function () {

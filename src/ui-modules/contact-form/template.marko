@@ -1,17 +1,23 @@
-<form action="MAILTO:parthk12@gmail.com" method="POST">
+<form action="/submit" method="get">
 <div class="form-group">
-
               <for(field in "${formFields}")>
-                    <if( "${field.fieldType}"=='input' )>
-
+                    <if( "${field.fieldType}"=='input' && "${field.fieldLength}"== 'regular')>
                           <label for="${field.text}"> ${field.text}: </label>
-                           <input type="${field.inputType}" placeholder="${field.text}" class="form-control" id="${field.text}" />
+                           <input type="${field.inputType}" placeholder="${field.text}" class="form-control" name="${field.text}" id="${field.text}"/>
                            <p></p>
                     </if>
+                    <if ( "${field.fieldType}"=='input' && "${field.fieldLength}"== 'large')>
+                      <label for="${field.text}"> ${field.text}: </label>
+                       <input type="${field.inputType}" placeholder="${field.text}" class="form-control input-lg" name="${field.text}" id="${field.text}"/>
+                       <p></p>
+                  </if>
                     <if( "${field.fieldType}"=='button' )>
                         <p>
                            <button type="submit" class="btn btn-primary">Submit</button>
                         </p>
+                    </if>
+                    <if ("${field.messageSent}"== true) >
+                      <p> <h6> Message Sent!</h6> </p>
                     </if>
                 </for>
 

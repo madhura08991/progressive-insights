@@ -20,7 +20,7 @@ function create(__helpers) {
         filename: __filename
       }, out);
 
-    out.w("<head> <link rel=\"stylesheet\" href=\"http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css\"> <script src=\"//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js\"></script> ");
+    out.w("<head> <link rel=\"stylesheet\" href=\"http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css\"> <script src=\"//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js\"></script> <link rel=\"stylesheet\" href=\"font-awesome\"> ");
 
     app_header_template.render({}, out);
 

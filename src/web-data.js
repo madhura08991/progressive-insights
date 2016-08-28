@@ -211,6 +211,10 @@ module.exports = function(request) {
        "type": "form",
        "fields": [
          {
+           "messageSent": false,
+         },
+
+         {
            "fieldType": "input",
            "text": "Name",
            "fieldLength": "regular",
