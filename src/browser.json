@@ -8,6 +8,6 @@
     "./ui-modules/contact-info/browser.json",
     "./ui-modules/person-profile/browser.json",
     "./lib/globalStyle.css",
-    "./lib/Skeleton-2.0.4/css/skeleton.css"
+    "require: bootstrap"
   ]
 }

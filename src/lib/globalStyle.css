@@ -1,15 +1,9 @@
 {
-  .body {
-    font: "Avenir Light";
-  }
+    body {
+        font: "Avenir Light";
+        .info-section-container {
+            background-color: #D6DBDF;
+            color: white
+        }
+    }
 }
-
-
-
-//titles - 50
-//text - 22
-//main title - 56
-//navigation text - 18
-//background - off white
-//main heading image - photo
-//footer color - cream

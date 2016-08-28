@@ -1,22 +1,19 @@
-<div class="form">
-  <form action="POST">
-  <div class="row">
-    <div class="six columns">
-    <for(field in "${formFields}") >
-      <if( "${field.fieldType}" =='input')>
-        <p>
-          <input type="${field.inputType}" placeholder="${field.text}" class="${field.fieldLength}" />
-        </p>
-      </if>
-      <if( "${field.fieldType}" =='button')>
-      <p>
-        <input class="button-primary" type="submit" value="${field.text}">
-      </p>
-      </if>
-    </for>
-    </div>
-    <div class="six columns">
-    </div>
-    </div>
-  </form>
+<form action="MAILTO:parthk12@gmail.com" method="POST">
+<div class="form-group">
+
+              <for(field in "${formFields}")>
+                    <if( "${field.fieldType}"=='input' )>
+
+                          <label for="${field.text}"> ${field.text}: </label>
+                           <input type="${field.inputType}" placeholder="${field.text}" class="form-control" id="${field.text}" />
+                           <p></p>
+                    </if>
+                    <if( "${field.fieldType}"=='button' )>
+                        <p>
+                           <button type="submit" class="btn btn-primary">Submit</button>
+                        </p>
+                    </if>
+                </for>
+
 </div>
+</form>

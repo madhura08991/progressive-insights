@@ -235,7 +235,7 @@ module.exports = function(request) {
            "inputType": "text"
          },
          {
-           "type": "button",
+           "fieldType": "button",
            "text": "Send"
          }
        ]

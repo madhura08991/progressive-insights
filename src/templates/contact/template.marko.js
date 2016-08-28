@@ -20,23 +20,23 @@ function create(__helpers) {
         filename: __filename
       }, out);
 
-    out.w("<head> ");
+    out.w("<head> <link rel=\"stylesheet\" href=\"http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css\"> <script src=\"//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js\"></script> ");
 
     app_header_template.render({}, out);
 
-    out.w(" </head> <body> <div class=\"container\"> ");
+    out.w(" </head> <body> <div class=\"container-fluid\"> ");
 
     app_main_banner_template.render(mainTitle = data.mainTitle, out);
 
-    out.w(" <div class=\"row\"> <div class=\"six columns\"> ");
+    out.w(" <div class=\"row\"> <div class=\"col-md-6\" style=\"padding-right: 20px; border-right:1px solid #ccc\"> ");
 
     contact_form_template.render(formFields = data.contents[0].fields, out);
 
-    out.w(" </div> <div class=\"six columns\"> ");
+    out.w(" </div> <div class=\"col-md-3\" style=\"padding-left:20px\"> ");
 
     contact_info_template.render(contact = data.contents[1].methods[0], out);
 
-    out.w(" </div> <div class=\"row\"> ");
+    out.w(" </div> <div class=\"col-md-3\"> ");
 
     contact_info_template.render(contact = data.contents[1].methods[1], out);
 

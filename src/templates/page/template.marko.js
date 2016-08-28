@@ -19,11 +19,11 @@ function create(__helpers) {
         filename: __filename
       }, out);
 
-    out.w("<head> ");
+    out.w("<head> <link rel=\"stylesheet\" href=\"http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css\"> <script src=\"//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js\"></script> ");
 
     app_header_template.render({}, out);
 
-    out.w(" </head> <body> ");
+    out.w(" </head> <body> <div class=\"container-fluid\"> ");
 
     app_main_banner_template.render(mainTitle = data.mainTitle, out);
 
@@ -35,7 +35,7 @@ function create(__helpers) {
 
     app_footer_template.render({}, out);
 
-    out.w(" </body>");
+    out.w(" </div> </body>");
   };
 }
 
