@@ -20,7 +20,7 @@ function create(__helpers) {
         filename: __filename
       }, out);
 
-    out.w("<head> <link rel=\"stylesheet\" href=\"http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css\"> <script src=\"//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js\"></script> <link rel=\"stylesheet\" href=\"font-awesome\"> ");
+    out.w("<head> <link rel=\"stylesheet\" href=\"http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css\"> <script src=\"//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js\"></script> <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css\"> ");
 
     app_header_template.render({}, out);
 
@@ -28,7 +28,7 @@ function create(__helpers) {
 
     app_main_banner_template.render(mainTitle = data.mainTitle, out);
 
-    out.w(" <div class=\"row\"> <div class=\"col-md-6\" style=\"padding-right: 20px; border-right:1px solid #ccc\"> ");
+    out.w(" <div class=\"row\" style=\"padding-bottom:200px\"> <div class=\"col-md-6\" style=\"padding-right: 20px; border-right:1px solid #ccc\"> ");
 
     contact_form_template.render(formFields = data.contents[0].fields, out);
 
