@@ -18,5 +18,7 @@
     <if ("${content.type}" == 'paypal-button')>
       <include("../ui-helpers/paypalButton.marko", buttonText = "${content.text}") />
     </if>
+    <if ("${content.type}" == 'img-para')>
+      <include("../ui-helpers/imgPara.marko", imgData= "${content.imgData}") />
   </for>
 </div>
