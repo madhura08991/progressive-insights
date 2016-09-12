@@ -8,7 +8,7 @@
                     </if>
                     <if ( "${field.fieldType}"=='input' && "${field.fieldLength}"== 'large')>
                       <label for="${field.text}"> ${field.text}: </label>
-                       <input type="${field.inputType}" placeholder="${field.text}" class="form-control input-lg" name="${field.text}" id="${field.text}"/>
+                       <input style="height:200px;" type="${field.inputType}"  class="form-control input-lg" name="${field.text}" id="${field.text}"/>
                        <p></p>
                   </if>
                     <if( "${field.fieldType}"=='button' )>

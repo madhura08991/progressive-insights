@@ -9,7 +9,6 @@ function create(__helpers) {
       app_header_template = loadTemplate(require.resolve("../../ui-modules/app-header/template.marko")),
       app_main_banner_template = loadTemplate(require.resolve("../../ui-modules/app-main-banner/template.marko")),
       contact_form_template = loadTemplate(require.resolve("../../ui-modules/contact-form/template.marko")),
-      contact_info_template = loadTemplate(require.resolve("../../ui-modules/contact-info/template")),
       app_footer_template = loadTemplate(require.resolve("../../ui-modules/app-footer/template.marko"));
 
   return function render(data, out) {
@@ -32,19 +31,11 @@ function create(__helpers) {
 
     contact_form_template.render(formFields = data.contents[0].fields, out);
 
-    out.w(" </div> <div class=\"col-md-3\" style=\"padding-left:20px\"> ");
-
-    contact_info_template.render(contact = data.contents[1].methods[0], out);
-
-    out.w(" </div> <div class=\"col-md-3\"> ");
-
-    contact_info_template.render(contact = data.contents[1].methods[1], out);
-
-    out.w(" </div> </div> </div> ");
+    out.w(" </div> <div class=\"col-md-6\" style=\"padding-left:20px\"> </div> </div> </div> <div class=\"footer\"> ");
 
     app_footer_template.render({}, out);
 
-    out.w(" </body>");
+    out.w(" </div> </body>");
   };
 }
 

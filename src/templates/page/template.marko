@@ -14,6 +14,9 @@
   <div class="container-fluid">
     <include("../../ui-modules/app-main-banner/template.marko", mainTitle= "${data.mainTitle}") />
     <include("../../ui-modules/app-info-section/template.marko", contents="${data.contents}") />
-    <include("../../ui-modules/app-footer/template.marko", {}) />
-  </div>
+      </div>
+<div class="footer">
+      <include( "../../ui-modules/app-footer/template.marko", {}) />
+    </div>
+
 </body>

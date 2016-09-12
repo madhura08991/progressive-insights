@@ -31,7 +31,7 @@ function create(__helpers) {
 
     app_info_section_template.render(contents = data.contents, out);
 
-    out.w(" ");
+    out.w(" </div> <div class=\"footer\"> ");
 
     app_footer_template.render({}, out);
 

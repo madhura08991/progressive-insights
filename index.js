@@ -11,6 +11,8 @@ var getData = require('./src/web-data');
 
 require('marko/node-require').install();
 
+app.use('/public', express.static(__dirname + "/public"));
+
 app.get('/', function(req, res) {
     homeTemplate.render({}, res);
 });

@@ -1,12 +1,14 @@
 <div class="leadership-person">
   <div class="row">
     <div class="col-md-4">
-      <img src="${person.imgSrc}" />
+      <img src="${person.imgSrc}" style="height:180px;width:180px;padding-bottom:10px;" />
     </div>
-    <div class="col-md-8">
+    <div class="col-md-8" style="padding-left:50px;padding-top:20px;">
       <p> <strong> ${person.title} </strong> </p>
       <p> ${person.statment} </p>
+<if ("${person.contact}")>
       <p> <i> ${person.contact} </i> </p>
+      </if>
     </div>
   </div>
 </div>

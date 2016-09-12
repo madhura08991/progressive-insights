@@ -1,6 +1,25 @@
 <div class="imagePara">
-  <p style="float:'${imgData.textPosition}'">
-  ${imgData.text}
-  </p>
-  <img src="${imgData.src}" style="display:inline;float:'${imgData.imgPosition}'" />
+    <div class="row">
+        <if ( "${imgData.imgPosition=='left'}")>
+            <div class="col-md-2">
+                <img src="${imgData.src}" style="float:'${imgData.imgPosition}';height:100px;width:auto;" />
+            </div>
+            <div class="col-md-10">
+                <p style="float:'${imgData.textPosition}'">
+                    ${imgData.text}
+                </p>
+            </div>
+        </if>
+        <if ( "${imgData.imgPosition=='right'}")>
+
+            <div class="col-md-6">
+                <p style="float:'${imgData.textPosition}'">
+                    ${imgData.text}
+                </p>
+            </div>
+            <div class="col-md-6">
+                <img src="${imgData.src}" style="float:'${imgData.imgPosition}';height:150px;width:auto;padding-right:10px;" />
+            </div>
+        </if>
+    </div>
 </div>
